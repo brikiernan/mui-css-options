@@ -15,7 +15,7 @@ function GlobalProsAndCons() {
         <ListItem>Could add duplicates or over-ride stlyes</ListItem>
         <ListItem>Not easily re-usable </ListItem>
         </List>
-        <Typography variant='body2'>See further infomation <a href="https://every-layout.dev/rudiments/global-and-local-styling/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+        <Typography variant='body2'>See further information <a href="https://every-layout.dev/rudiments/global-and-local-styling/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }

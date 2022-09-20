@@ -15,7 +15,7 @@ function ModulesProsAndCons() {
         <ListItem>To describe global styles, you must use a syntax that does not belong to the CSS specification</ListItem>
         <ListItem></ListItem>
         </List>
-        <Typography variant='body2'>See further infomation <a href="https://css-tricks.com/css-modules-part-1-need/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+        <Typography variant='body2'>See further information <a href="https://css-tricks.com/css-modules-part-1-need/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }

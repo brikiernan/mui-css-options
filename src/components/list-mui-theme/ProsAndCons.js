@@ -16,7 +16,7 @@ function ThemeProsAndCons() {
         <ListItem>More complicated to write</ListItem>
         <ListItem>Verbose</ListItem>
         </List>
-        <Typography variant='body2'>See further infomation <a href="https://mui.com/material-ui/customization/theming/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+        <Typography variant='body2'>See further information <a href="https://mui.com/material-ui/customization/theming/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }

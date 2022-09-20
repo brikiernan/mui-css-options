@@ -17,7 +17,7 @@ function SXProsAndCons() {
         <ListItem>Can be considered "inline" styling </ListItem>
         <ListItem>Not abstract</ListItem>
       </List>
-      <Typography variant='body2'>See further infomation <a href="https://mui.com/system/getting-started/the-sx-prop/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+      <Typography variant='body2'>See further information <a href="https://mui.com/system/getting-started/the-sx-prop/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }

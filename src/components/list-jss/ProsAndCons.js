@@ -16,7 +16,7 @@ function JSSProsAndCons() {
         <ListItem>Not the recommended version</ListItem>
         <ListItem>Verbose </ListItem>
         </List>
-        <Typography variant='body2'>See further infomation <a href="https://mui.com/system/styles/advanced/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+        <Typography variant='body2'>See further information <a href="https://mui.com/system/styles/advanced/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }

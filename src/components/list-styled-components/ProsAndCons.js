@@ -21,7 +21,7 @@ function StyledProsAndCons() {
         <ListItem>Workarounds are required </ListItem>
         <ListItem>Unusual way to write styles</ListItem>
         </List>
-        <Typography variant='body2'>See further infomation <a href="https://devrecipes.net/styled-components-pros-and-cons/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+        <Typography variant='body2'>See further information <a href="https://devrecipes.net/styled-components-pros-and-cons/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   )
 }
