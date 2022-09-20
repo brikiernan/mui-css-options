@@ -1,0 +1,63 @@
+.MuiList-root {
+  background-color: var(--color-background-surface-default);
+  padding: 0 !important;
+}
+
+.MuiListItemButton-root {
+  gap: 16px;
+  padding: 4px 16px !important;
+}
+
+.MuiListItemButton-root:hover {
+  background-color: var(--color-background-surface-hover) !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  background-color: var(--color-background-surface-selected);
+  border-left: 4px solid var(--color-border-interactive-default);
+  padding-left: 12px !important;
+}
+
+.MuiListItemButton-root.MuiListItemButton-divider {
+  border-bottom: 2px solid var(--color-text-inverse);
+}
+
+.MuiListItemIcon-root {
+  min-width: 14px !important;
+}
+
+.MuiListItemText-primary span {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-base);
+  /* i.e. noWrap prop === true */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.MuiListItemText-secondary p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-sm);
+  max-width: 80%;
+  /* i.e. noWrap prop === true */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ListCssStack {
+  align-items: center;
+  min-width: fit-content;
+}
+
+.ListCssStack p:nth-child(even) {
+  font-size: var(--font-size-sm);
+}
+
+.MuiIconButton-root {
+  padding: 0 !important;
+}
