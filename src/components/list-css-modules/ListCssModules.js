@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { RuxIcon, RuxStatus } from '@astrouxds/react';
 import {
   ButtonGroup,
@@ -17,8 +17,6 @@ export const ListCssModules = ({ items }) => {
   const [selected, setSelected] = useState(-1);
   const handleSelected = index => setSelected(index);
   const resetSelected = () => setSelected(-1);
-
-  useEffect(() => console.log('[MODULE STYLES]', styles), []);
 
   return (
     <ClickAwayListener onClickAway={resetSelected}>
