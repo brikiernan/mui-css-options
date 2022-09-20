@@ -1,7 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 function SXProsAndCons() {
   return (
-    <div>
-      <h3>Pro's:</h3>
+    <Box>
+      <Typography variant='h3'>Pro's:</Typography>
       <ul>
         <li>Can specify any valid CSS using this prop</li>
         <li>Reusable</li>
@@ -9,14 +11,14 @@ function SXProsAndCons() {
         <li>No boilerplate code (requires less code)</li>
         <li>Reusable</li>
       </ul>
-      <h3>Con's:</h3>
+      <Typography variant='h3'>Con's:</Typography>
       <ul>
         <li>More code</li>
         <li>No custom class name on the DOM</li>
         <li>Can be considered "inline" styling </li>
         <li>Not abstract</li>
       </ul>
-    </div>
+    </Box>
   );
 }
 
