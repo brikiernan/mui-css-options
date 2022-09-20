@@ -1,26 +1,30 @@
-function JSSProsAndCons() {
+import { Box, Typography, List, ListItem } from '@mui/material';
+
+function StyledProsAndCons() {
   return (
-    <div>
-      <h3>Pro's:</h3>
-      <ul>
-        <li>
+    <Box>
+      <Typography variant='h6'>Pros:</Typography>
+      <List>
+        <ListItem>
           Abstract all styling components and package them into a new component
-        </li>
-        <li>Reusable </li>
-        <li>Pure CSS, no different syntax</li>
-        <li>Dynamic styling by using props</li>
-      </ul>
-      <h3>Con's:</h3>
-      <ul>
-        <li>
-          Polluting the React DOM- this library adds any levels of nesting{' '}
-        </li>
-        <li>Debugging can get tedious </li>
-        <li>Workarounds are required </li>
-        <li>Unusual way to write styles</li>
-      </ul>
-    </div>
-  );
+        </ListItem>
+        <ListItem>Reusable</ListItem>
+        <ListItem>Pure CSS, no different syntax</ListItem>
+        <ListItem>Dynamic styling by using props</ListItem>
+        </List>
+      <Typography variant='h6'>Cons:</Typography>
+      <List>
+        <ListItem>
+          Polluting the React DOM- this library adds many levels of nesting{' '}
+        </ListItem>
+        <ListItem>Debugging can get tedious </ListItem>
+        <ListItem>Workarounds are required </ListItem>
+        <ListItem>Unusual way to write styles</ListItem>
+        </List>
+        <Typography variant='body2'>See further infomation <a href="https://devrecipes.net/styled-components-pros-and-cons/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
+    </Box>
+  )
 }
 
-export default JSSProsAndCons;
+export default StyledProsAndCons;
+

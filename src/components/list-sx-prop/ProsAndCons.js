@@ -1,29 +1,25 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, List, ListItem } from '@mui/material';
 
 function SXProsAndCons() {
   return (
     <Box>
-      <Typography variant='h3'>Pro's:</Typography>
-      <ul>
-        <li>Can specify any valid CSS using this prop</li>
-        <li>Reusable</li>
-        <li>Use for "one-time" styling</li>
-        <li>No boilerplate code (requires less code)</li>
-        <li>Reusable</li>
-      </ul>
-      <Typography variant='h3'>Con's:</Typography>
-      <ul>
-        <li>More code</li>
-        <li>No custom class name on the DOM</li>
-        <li>Can be considered "inline" styling </li>
-        <li>Not abstract</li>
-      </ul>
+      <Typography variant='h6'>Pros:</Typography>
+      <List>
+        <ListItem>Can specify any valid CSS using this prop</ListItem>
+        <ListItem>Reusable</ListItem>
+        <ListItem>Use for "one-time" styling</ListItem>
+        <ListItem>No boilerplate code (requires less code)</ListItem>
+      </List>
+      <Typography variant='h6'>Cons:</Typography>
+      <List>
+        <ListItem>More code</ListItem>
+        <ListItem>No custom class name on the DOM</ListItem>
+        <ListItem>Can be considered "inline" styling </ListItem>
+        <ListItem>Not abstract</ListItem>
+      </List>
+      <Typography variant='body2'>See further infomation <a href="https://mui.com/system/getting-started/the-sx-prop/" target="_blank" rel="noreferrer noopener"> here</a>!</Typography>
     </Box>
   );
 }
 
 export default SXProsAndCons;
-//div is a box component
-//h3 should be a typography component- on this I would make it an h3
-//UL is going to be a list compoentn
-//LI is going to be a list item
