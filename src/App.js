@@ -19,7 +19,7 @@ import StyledProsAndCons from 'components/list-styled-components/ProsAndCons';
 import ModulesProsAndCons from 'components/list-css-modules/ProsAndCons';
 import GlobalProsAndCons from 'components/list-css/ProsAndCons';
 import ThemeProsAndCons from 'components/list-mui-theme/ProsAndCons';
-import Consensus from 'components/Consensus/consensus';
+import Consensus from 'components/consensus/Consensus';
 
 const Heading = styled('h3')(({ theme }) => ({
   fontSize: '1.25rem',
