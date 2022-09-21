@@ -1,14 +1,21 @@
 import { useState } from 'react';
-import { RuxButton, RuxStatus } from '@astrouxds/react';
+import { RuxIcon, RuxStatus } from '@astrouxds/react';
 import {
+  ButtonGroup,
   ClickAwayListener,
+  IconButton,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
   Stack,
+  styled,
   Typography,
 } from '@mui/material';
+
+const TextSmall = styled(Typography)({
+  fontSize: 'var(--font-size-sm)',
+});
 
 export const ListMuiTheme = ({ items }) => {
   const [selected, setSelected] = useState(-1);
@@ -28,16 +35,22 @@ export const ListMuiTheme = ({ items }) => {
               <RuxStatus status={item.status} />
             </ListItemIcon>
             <ListItemText primary={item.text} secondary={item.subText} />
-            <Stack>
+            <Stack alignItems='center' minWidth='fit-content'>
               <Typography>{item.dateStart}</Typography>
-              <Typography>{item.timeStart}</Typography>
+              <TextSmall>{item.timeStart}</TextSmall>
             </Stack>
-            <Stack>
+            <Stack alignItems='center' minWidth='fit-content'>
               <Typography>{item.dateEnd}</Typography>
-              <Typography>{item.timeEnd}</Typography>
+              <TextSmall>{item.timeEnd}</TextSmall>
             </Stack>
-            <RuxButton icon='edit' iconOnly borderless />
-            <RuxButton icon='more-vert' iconOnly borderless />
+            <ButtonGroup>
+              <IconButton>
+                <RuxIcon size='1.25rem' icon='edit' />
+              </IconButton>
+              <IconButton sx={{ p: 0 }}>
+                <RuxIcon size='1.75rem' icon='more-vert' />
+              </IconButton>
+            </ButtonGroup>
           </ListItemButton>
         ))}
       </List>

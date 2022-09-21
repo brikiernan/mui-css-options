@@ -20,10 +20,13 @@ const useStyles = makeStyles({
   listItem: {
     gap: 16,
     padding: '4px 16px !important',
+    '&:hover': {
+      backgroundColor: 'var(--color-background-surface-hover) !important',
+    },
     '&.Mui-selected': {
       backgroundColor: 'var(--color-background-surface-selected) !important',
       borderLeft: '4px solid var(--color-border-interactive-default)',
-      paddingLeft: '12px',
+      paddingLeft: '12px !important',
     },
   },
   divider: {
