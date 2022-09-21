@@ -26,9 +26,11 @@ export const theme = createTheme({
   },
   components: {
     MuiLink: {
+      defaultProps: {
+        underline: 'none',
+      },
       styleOverrides: {
         root: {
-          textDecoration: 'none',
           color: 'var(--color-text-interactive-default)',
         },
       },
