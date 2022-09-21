@@ -43,9 +43,18 @@ const App = () => (
       </Typography>
       <ListCss items={items} />
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={["Simple Syntax", "Most Common;y Known"]}
+        cons={[
+          "Global, unless defined otherwise",
+          "Could add duplicates or over-ride stlyes",
+          "Not easily re-usable",
+        ]}
+        resources={[
+          {
+            href: "https://every-layout.dev/rudiments/global-and-local-styling/'",
+            title: "Global CSS",
+          },
+        ]}
       />
     </Stack>
 
@@ -53,9 +62,21 @@ const App = () => (
       <Heading>CSS Modules</Heading>
       <ListCssModules items={items} />
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={[
+          "Creates a random identifier to avoid naming collisions",
+          "Modular and reusable CSS",
+          "Local scope",
+        ]}
+        cons={[
+          "More difficult to do dynamic CSS",
+          " To describe global styles, you must use a syntax that does not belong to the CSS specification",
+        ]}
+        resources={[
+          {
+            href: "https://css-tricks.com/css-modules-part-1-need/",
+            title: "Modules",
+          },
+        ]}
       />
     </Section>
 
@@ -63,9 +84,20 @@ const App = () => (
       <Heading>CSS in JS</Heading>
       <ListJss items={items} />
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={[
+          "Not global styling",
+          "Given unique ID to avoid naming collisions",
+          "Pass props or conditions to give styling to that condition",
+          "Makes conditional rendering significantly easier",
+        ]}
+        cons={[
+          "More complicated to write",
+          "Not the recommended version",
+          "Verbose",
+        ]}
+        resources={[
+          { href: "https://mui.com/system/styles/advanced/", title: "JSS" },
+        ]}
       />
     </Section>
 
@@ -73,9 +105,24 @@ const App = () => (
       <Heading>SX Prop</Heading>
       <ListSxProp items={items} />
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={[
+          "Can specify any valid CSS using this prop",
+          "Reusable",
+          "Use for 'one-time' styling",
+          "No boilerplate code (requires less code)",
+        ]}
+        cons={[
+          "More code",
+          "No custom class name on the DOM",
+          "Can be considered inline styling",
+          "Not Abstract",
+        ]}
+        resources={[
+          {
+            href: "https://mui.com/system/getting-started/the-sx-prop/",
+            title: "SX",
+          },
+        ]}
       />
     </Section>
 
@@ -83,9 +130,24 @@ const App = () => (
       <Heading>Styled Components</Heading>
       <ListStyledComponents items={items} />
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={[
+          "Abstract all styling components and package them into a new component",
+          "Reusable",
+          "Pure CSS, no different syntax",
+          "Dynamic styling by using props",
+        ]}
+        cons={[
+          "Polluting the React DOM- this library adds many levels of nesting",
+          "Debugging can get tedious",
+          "Workarounds are required",
+          "Unusual way to write styles",
+        ]}
+        resources={[
+          {
+            href: "https://devrecipes.net/styled-components-pros-and-cons/",
+            title: "Styled Components",
+          },
+        ]}
       />
     </Section>
 
@@ -96,9 +158,23 @@ const App = () => (
         <ListMuiTheme items={items} />
       </ThemeProvider>
       <ProsAndCons
-        pros={["aklsdh", "laskd"]}
-        cons={["lkahlk", "laksjals"]}
-        resources={[{ href: "#", title: "Resource tile" }]}
+        pros={[
+          "ThemeProvider allows overridden stlyes to be applied to specific sections",
+          "We can create themes and export them anywhere within the provider",
+          "Makes conditional rendering significantly easier",
+          "Reusable",
+        ]}
+        cons={[
+          "Overriding them theme requires knowledge of theme override syntax",
+          "More complicated to write",
+          "Verbose",
+        ]}
+        resources={[
+          {
+            href: "https://mui.com/material-ui/customization/theming/",
+            title: "MUI Theme",
+          },
+        ]}
       />
     </Section>
 
