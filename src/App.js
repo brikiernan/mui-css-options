@@ -43,7 +43,7 @@ const App = () => (
       </Typography>
       <ListCss items={items} />
       <ProsAndCons
-        pros={["Simple Syntax", "Most Common;y Known"]}
+        pros={["Simple Syntax", "Most Commonly Known", "Cleaner markup"]}
         cons={[
           "Global, unless defined otherwise",
           "Could add duplicates or over-ride stlyes",
@@ -70,6 +70,7 @@ const App = () => (
         cons={[
           "More difficult to do dynamic CSS",
           " To describe global styles, you must use a syntax that does not belong to the CSS specification",
+          "Complicated",
         ]}
         resources={[
           {
@@ -89,6 +90,8 @@ const App = () => (
           "Given unique ID to avoid naming collisions",
           "Pass props or conditions to give styling to that condition",
           "Makes conditional rendering significantly easier",
+          "Complicated and clunky",
+          "Less maintainable, weird pattern",
         ]}
         cons={[
           "More complicated to write",
@@ -108,13 +111,12 @@ const App = () => (
         pros={[
           "Can specify any valid CSS using this prop",
           "Reusable",
-          "Use for 'one-time' styling",
+          "Use for 'one-time' styling, similar to inline styling",
           "No boilerplate code (requires less code)",
         ]}
         cons={[
-          "More code",
+          "More code, heavy markup",
           "No custom class name on the DOM",
-          "Can be considered inline styling",
           "Not Abstract",
         ]}
         resources={[
@@ -163,6 +165,7 @@ const App = () => (
           "We can create themes and export them anywhere within the provider",
           "Makes conditional rendering significantly easier",
           "Reusable",
+          "All the benefits of global CSS, none of the cons",
         ]}
         cons={[
           "Overriding them theme requires knowledge of theme override syntax",
@@ -178,7 +181,7 @@ const App = () => (
       />
     </Section>
 
-    <Section mt={8}>
+    <Section>
       <Consensus />
     </Section>
   </Stack>
