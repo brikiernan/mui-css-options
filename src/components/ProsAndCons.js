@@ -11,12 +11,12 @@ export const ProsAndCons = ({ pros, cons, resources }) => (
     <Typography variant='h6'>Cons:</Typography>
     <List>
       {cons.map(con => (
-        <ListItem>{con}</ListItem>
+        <ListItem key={con}>{con}</ListItem>
       ))}
     </List>
     <Typography variant='h6'>Resources:</Typography>
     {resources.map(({ href, title }) => (
-      <Box>
+      <Box key={href}>
         <Link
           underline='none'
           variant='body2'
