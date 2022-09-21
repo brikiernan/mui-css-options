@@ -4,74 +4,89 @@ import {
   CssBaseline,
   ThemeProvider,
   Typography,
-} from '@mui/material';
-import { items } from 'data/items';
-import { theme } from 'themes/theme';
-import { ListCss } from 'components/list-css/ListCss';
-import { ListCssModules } from 'components/list-css-modules/ListCssModules';
-import { ListJss } from 'components/list-jss/ListJss';
-import { ListSxProp } from 'components/list-sx-prop/ListSxProp';
-import { ListStyledComponents } from 'components/list-styled-components/ListStyledComponent';
-import { ListMuiTheme } from 'components/list-mui-theme/ListMuiTheme';
-import SXProsAndCons from 'components/list-sx-prop/ProsAndCons';
-import JSSProsAndCons from 'components/list-jss/ProsAndCons';
-import StyledProsAndCons from 'components/list-styled-components/ProsAndCons';
-import ModulesProsAndCons from 'components/list-css-modules/ProsAndCons';
-import GlobalProsAndCons from 'components/list-css/ProsAndCons';
-import ThemeProsAndCons from 'components/list-mui-theme/ProsAndCons';
-import Consensus from 'components/consensus/Consensus';
+} from "@mui/material";
+import { items } from "data/items";
+import { theme } from "themes/theme";
+import { ListCss } from "components/list-css/ListCss";
+import { ListCssModules } from "components/list-css-modules/ListCssModules";
+import { ListJss } from "components/list-jss/ListJss";
+import { ListSxProp } from "components/list-sx-prop/ListSxProp";
+import { ListStyledComponents } from "components/list-styled-components/ListStyledComponent";
+import { ListMuiTheme } from "components/list-mui-theme/ListMuiTheme";
+import { ProsAndCons } from "components/ProsAndCons";
+import Consensus from "components/consensus/Consensus";
 
-const Heading = styled('h3')(({ theme }) => ({
-  fontSize: '1.25rem',
+const Heading = styled("h3")(({ theme }) => ({
+  fontSize: "1.25rem",
   fontWeight: theme.typography.fontWeightMedium,
   margin: theme.spacing(0),
 }));
 
-const Section = styled('section')({
+const Section = styled("section")({
   width: 480,
   gap: 8,
-  display: 'flex',
-  flexDirection: 'column',
+  display: "flex",
+  flexDirection: "column",
   marginBottom: 16,
 });
 
 const App = () => (
-  <Stack py={4} component='main' alignItems='center'>
+  <Stack py={4} component="main" alignItems="center">
     <Stack
       mb={2}
       spacing={1}
-      width={theme => theme.spacing(60)}
-      component='section'
+      width={(theme) => theme.spacing(60)}
+      component="section"
     >
-      <Typography fontWeight='medium' fontSize='1.25rem' component='h3'>
+      <Typography fontWeight="medium" fontSize="1.25rem" component="h3">
         Global CSS
       </Typography>
       <ListCss items={items} />
-      <GlobalProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Stack>
 
     <Section>
       <Heading>CSS Modules</Heading>
       <ListCssModules items={items} />
-      <ModulesProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Section>
 
     <Section>
       <Heading>CSS in JS</Heading>
       <ListJss items={items} />
-      <JSSProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Section>
 
     <Section>
       <Heading>SX Prop</Heading>
       <ListSxProp items={items} />
-      <SXProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Section>
 
     <Section>
       <Heading>Styled Components</Heading>
       <ListStyledComponents items={items} />
-      <StyledProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Section>
 
     <Section>
@@ -80,10 +95,14 @@ const App = () => (
         <CssBaseline />
         <ListMuiTheme items={items} />
       </ThemeProvider>
-      <ThemeProsAndCons />
+      <ProsAndCons
+        pros={["aklsdh", "laskd"]}
+        cons={["lkahlk", "laksjals"]}
+        resources={[{ href: "#", title: "Resource tile" }]}
+      />
     </Section>
 
-    <Section>
+    <Section mt={8}>
       <Consensus />
     </Section>
   </Stack>
