@@ -52,16 +52,19 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
+          ':hover': {
+            backgroundColor: 'var(--color-background-surface-hover)',
+          },
           '&.Mui-selected': {
             backgroundColor: 'var(--color-background-surface-selected)',
             borderLeft: '4px solid var(--color-border-interactive-default)',
-            paddingLeft: 12,
+            paddingLeft: '0.75rem',
           },
           '&.MuiListItemButton-divider': {
             borderBottom: '2px solid var(--color-text-inverse)',
           },
-          gap: 16,
-          padding: '4px 16px',
+          gap: '1rem',
+          padding: '0.1875rem 1rem',
         },
       },
     },

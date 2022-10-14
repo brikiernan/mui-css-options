@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { RuxIcon, RuxStatus } from '@astrouxds/react';
 import {
+  Box,
   ButtonGroup,
   ClickAwayListener,
   IconButton,
   List,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
   Stack,
   styled,
@@ -31,9 +31,8 @@ export const ListMuiTheme = ({ items }) => {
             onClick={() => handleSelected(i)}
             key={i}
           >
-            <ListItemIcon>
-              <RuxStatus status={item.status} />
-            </ListItemIcon>
+            <Box component={RuxStatus} status={item.status} />
+
             <ListItemText primary={item.text} secondary={item.subText} />
             <Stack alignItems='center' minWidth='fit-content'>
               <Typography>{item.dateStart}</Typography>

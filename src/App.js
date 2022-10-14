@@ -5,6 +5,7 @@ import {
   CssBaseline,
   ThemeProvider,
   Typography,
+  StyledEngineProvider,
 } from '@mui/material';
 import { items } from 'data/items';
 import { theme } from 'themes/theme';
@@ -67,10 +68,14 @@ const App = () => (
         ]}
       />
     </Stack>
+
     <StyledDivider />
+
     <Section>
       <Heading>CSS Modules</Heading>
-      <ListCssModules items={items} />
+      <StyledEngineProvider injectFirst>
+        <ListCssModules items={items} />
+      </StyledEngineProvider>
       <ProsAndCons
         pros={[
           'Creates a random identifier to avoid naming collisions',
@@ -94,10 +99,14 @@ const App = () => (
         ]}
       />
     </Section>
+
     <StyledDivider />
+
     <Section>
       <Heading>CSS in JS</Heading>
-      <ListJss items={items} />
+      <StyledEngineProvider injectFirst>
+        <ListJss items={items} />
+      </StyledEngineProvider>
       <ProsAndCons
         pros={[
           'Not global styling',
@@ -120,7 +129,9 @@ const App = () => (
         ]}
       />
     </Section>
+
     <StyledDivider />
+
     <Section>
       <Heading>SX Prop</Heading>
       <ListSxProp items={items} />
@@ -144,7 +155,9 @@ const App = () => (
         ]}
       />
     </Section>
+
     <StyledDivider />
+
     <Section>
       <Heading>Styled Components</Heading>
       <ListStyledComponents items={items} />
@@ -173,7 +186,9 @@ const App = () => (
         ]}
       />
     </Section>
+
     <StyledDivider />
+
     <Section>
       <Heading>Mui Theme</Heading>
       <ThemeProvider theme={theme}>
