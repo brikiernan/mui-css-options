@@ -12,6 +12,22 @@ import {
   Typography,
 } from '@mui/material';
 
+const sx = {
+  p: theme => theme.spacing(0.5, 2),
+  gap: 2, // 16px
+  '&:hover': {
+    backgroundColor: 'var(--color-background-surface-hover)',
+  },
+  '&.Mui-selected': {
+    backgroundColor: 'var(--color-background-surface-selected)',
+    borderLeft: '4px solid var(--color-border-interactive-default)',
+    paddingLeft: 1.5, // 12px
+  },
+  '&.MuiListItemButton-divider': {
+    borderBottom: '2px solid var(--color-text-inverse)',
+  },
+};
+
 export const ListSxProp = ({ items }) => {
   const [selected, setSelected] = useState(-1);
   const handleSelected = index => setSelected(index);
@@ -30,21 +46,7 @@ export const ListSxProp = ({ items }) => {
             selected={i === selected}
             onClick={() => handleSelected(i)}
             key={i}
-            sx={{
-              p: theme => theme.spacing(0.5, 2),
-              gap: 2, // 16px
-              '&:hover': {
-                backgroundColor: 'var(--color-background-surface-hover)',
-              },
-              '&.Mui-selected': {
-                backgroundColor: 'var(--color-background-surface-selected)',
-                borderLeft: '4px solid var(--color-border-interactive-default)',
-                paddingLeft: 1.5, // 12px
-              },
-              '&.MuiListItemButton-divider': {
-                borderBottom: '2px solid var(--color-text-inverse)',
-              },
-            }}
+            sx={sx}
           >
             <ListItemIcon sx={{ minWidth: '14px' }}>
               <RuxStatus status={item.status} />

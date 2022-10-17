@@ -5,15 +5,12 @@ import {
   CssBaseline,
   ThemeProvider,
   Typography,
-  StyledEngineProvider,
 } from '@mui/material';
+
 import { items } from 'data/items';
 import { theme } from 'themes/theme';
 import { ListCss } from 'components/list-css/ListCss';
-import { ListCssModules } from 'components/list-css-modules/ListCssModules';
-import { ListJss } from 'components/list-jss/ListJss';
 import { ListSxProp } from 'components/list-sx-prop/ListSxProp';
-import { ListStyledComponents } from 'components/list-styled-components/ListStyledComponent';
 import { ListMuiTheme } from 'components/list-mui-theme/ListMuiTheme';
 import { ProsAndCons } from 'components/ProsAndCons';
 
@@ -72,67 +69,6 @@ const App = () => (
     <StyledDivider />
 
     <Section>
-      <Heading>CSS Modules</Heading>
-      <StyledEngineProvider injectFirst>
-        <ListCssModules items={items} />
-      </StyledEngineProvider>
-      <ProsAndCons
-        pros={[
-          'Creates a random identifier to avoid naming collisions',
-          'Modular and reusable CSS',
-          'Local scope',
-        ]}
-        cons={[
-          'More difficult to do dynamic CSS',
-          ' To describe global styles, you must use a syntax that does not belong to the CSS specification',
-          'Complicated',
-        ]}
-        resources={[
-          {
-            href: 'https://create-react-app.dev/docs/adding-a-css-modules-stylesheet',
-            title: 'Create React App CSS Modules Docs',
-          },
-          {
-            href: 'https://css-tricks.com/css-modules-part-1-need',
-            title: 'Css Tricks Css Modules',
-          },
-        ]}
-      />
-    </Section>
-
-    <StyledDivider />
-
-    <Section>
-      <Heading>CSS in JS</Heading>
-      <StyledEngineProvider injectFirst>
-        <ListJss items={items} />
-      </StyledEngineProvider>
-      <ProsAndCons
-        pros={[
-          'Not global styling',
-          'Given unique ID to avoid naming collisions',
-          'Pass props or conditions to give styling to that condition',
-          'Makes conditional rendering significantly easier',
-          'Complicated and clunky',
-          'Less maintainable, weird pattern',
-        ]}
-        cons={[
-          'More complicated to write',
-          'Not the recommended version',
-          'Verbose',
-        ]}
-        resources={[
-          {
-            href: 'https://mui.com/system/styles/advanced/',
-            title: 'Mui JSS Docs',
-          },
-        ]}
-      />
-    </Section>
-
-    <StyledDivider />
-
-    <Section>
       <Heading>SX Prop</Heading>
       <ListSxProp items={items} />
       <ProsAndCons
@@ -151,37 +87,6 @@ const App = () => (
           {
             href: 'https://mui.com/system/getting-started/the-sx-prop/',
             title: 'Mui SX Docs',
-          },
-        ]}
-      />
-    </Section>
-
-    <StyledDivider />
-
-    <Section>
-      <Heading>Styled Components</Heading>
-      <ListStyledComponents items={items} />
-      <ProsAndCons
-        pros={[
-          'Abstract all styling components and package them into a new component',
-          'Reusable',
-          'Pure CSS, no different syntax',
-          'Dynamic styling by using props',
-        ]}
-        cons={[
-          'Polluting the React DOM- this library adds many levels of nesting',
-          'Debugging can get tedious',
-          'Workarounds are required',
-          'Unusual way to write styles',
-        ]}
-        resources={[
-          {
-            href: 'https://mui.com/material-ui/customization/how-to-customize/#2-reusable-component',
-            title: 'Mui Docs On Using Styled Components',
-          },
-          {
-            href: 'https://devrecipes.net/styled-components-pros-and-cons/',
-            title: 'Styled Components',
           },
         ]}
       />
